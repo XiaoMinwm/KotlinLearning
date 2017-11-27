@@ -19,5 +19,10 @@ fun <T> max(collection: Collection<T>, less: (T, T) -> Boolean): T? {
 }
 
 fun main(args: Array<String>) {
-    foo(listOf(1,2,3,0,4))
+    //foo(listOf(1,2,3,0,4))
+    val less:(Int, Int)->Boolean = {x,y-> x<y }
+    val ints = listOf(1,2,3)
+
+    val max = max(ints, less)
+    println(max)
 }
